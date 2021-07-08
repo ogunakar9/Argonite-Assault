@@ -7,6 +7,7 @@ public class PlayerControls : MonoBehaviour
     [SerializeField] private float controlSpeed = 10f;
     [SerializeField] private float xRange = 11.5f;
     [SerializeField] private float yRange = 8f;
+    [SerializeField] private GameObject[] lasers;
 
     [SerializeField] private float positionPitchFactor = -2f;
     [SerializeField] private float controlPitchFactor = -10;
@@ -18,6 +19,7 @@ public class PlayerControls : MonoBehaviour
     {
         ProcessTranslation();
         ProcessRotation();
+        ProcessFiring();
     }
 
     void ProcessRotation()
@@ -48,4 +50,33 @@ public class PlayerControls : MonoBehaviour
 
         transform.localPosition = new Vector3(clampedxPos, clampedyPos, transform.localPosition.z);
     }
+
+    void ProcessFiring()
+    {
+        if (Input.GetButton("Fire1"))
+        {
+            ActivateLasers();
+        }
+        else
+        {
+            DeactivateLasers();
+        }
+    }
+    private void ActivateLasers()
+    {
+        foreach (GameObject laser in lasers)
+        {
+            laser.SetActive(true);
+        }
+    }
+    
+    private void DeactivateLasers()
+    {
+        foreach (GameObject laser in lasers)
+        {
+            laser.SetActive(false);
+        }
+    }
+
+   
 }

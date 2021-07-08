@@ -123,6 +123,16 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &52729288 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2852581028224042863, guid: d7ddcc193f97f49f18eb0e9f9bf6fe5f, type: 3}
+  m_PrefabInstance: {fileID: 1036829956979716219}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &374572617 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9161521161889063547, guid: d7ddcc193f97f49f18eb0e9f9bf6fe5f, type: 3}
+  m_PrefabInstance: {fileID: 1036829956979716219}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -614,5 +624,17 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Rig
       objectReference: {fileID: 0}
+    - target: {fileID: 2333982729906359804, guid: d7ddcc193f97f49f18eb0e9f9bf6fe5f, type: 3}
+      propertyPath: lasers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2333982729906359804, guid: d7ddcc193f97f49f18eb0e9f9bf6fe5f, type: 3}
+      propertyPath: lasers.Array.data[0]
+      value: 
+      objectReference: {fileID: 374572617}
+    - target: {fileID: 2333982729906359804, guid: d7ddcc193f97f49f18eb0e9f9bf6fe5f, type: 3}
+      propertyPath: lasers.Array.data[1]
+      value: 
+      objectReference: {fileID: 52729288}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d7ddcc193f97f49f18eb0e9f9bf6fe5f, type: 3}
