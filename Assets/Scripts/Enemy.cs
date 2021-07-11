@@ -7,8 +7,7 @@ public class Enemy : MonoBehaviour
 {
     [SerializeField] private GameObject deathVFX;
     [SerializeField] private Transform parent;
-    
-    [SerializeField] int amountToIncreaseScore;
+    [SerializeField] int scorePerHit = 15;
 
     private ScoreBoard scoreBoard;
 
@@ -25,7 +24,7 @@ public class Enemy : MonoBehaviour
     
     private void ProcessHit()
     {
-        scoreBoard.IncreaseScore(amountToIncreaseScore);
+        scoreBoard.IncreaseScore(scorePerHit);
     }
 
     private void KillEnemy()
