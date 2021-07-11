@@ -54,6 +54,7 @@
   <ItemGroup>
      <Compile Include="Assets\AssetPacks\Standard Assets\Environment\Water\Water\Scripts\WaterBase.cs" />
      <Compile Include="Assets\AssetPacks\Standard Assets\Environment\Water\Water\Scripts\MeshContainer.cs" />
+     <Compile Include="Assets\Scripts\SelfDestruct.cs" />
      <Compile Include="Assets\AssetPacks\Standard Assets\Environment\Water\Water\Scripts\Displace.cs" />
      <Compile Include="Assets\AssetPacks\Standard Assets\Environment\Water\Water\Scripts\GerstnerDisplace.cs" />
      <Compile Include="Assets\Scripts\PlayerControls.cs" />
@@ -65,7 +66,7 @@
      <Compile Include="Assets\AssetPacks\Standard Assets\Environment\Water\Water\Scripts\Water.cs" />
      <Compile Include="Assets\AssetPacks\Standard Assets\Environment\Water\Water\Scripts\WaterTile.cs" />
      <Compile Include="Assets\AssetPacks\Standard Assets\Environment\Water\Water\Scripts\SpecularLighting.cs" />
-     <Compile Include="Assets\Scripts\SelfDestruct.cs" />
+     <Compile Include="Assets\Scripts\ScoreBoard.cs" />
      <None Include="Assets\Samples\Terrain Tools\0.1.0-preview\Terrain Assets\ThirdPartyNotices.txt" />
      <None Include="Assets\AssetPacks\Standard Assets\Environment\Water\Water4\Shaders\WaterInclude.cginc" />
      <None Include="Assets\AssetPacks\Standard Assets\Environment\Water\Water4\Shaders\FXWater4Advanced.shader" />
