@@ -232,6 +232,7 @@ GameObject:
   - component: {fileID: 480219994356805673}
   - component: {fileID: 472836146945741341}
   - component: {fileID: 1258050399018151630}
+  - component: {fileID: 8522762927855082537}
   m_Layer: 0
   m_Name: Pest
   m_TagString: Untagged
@@ -315,11 +316,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd02c3da3090c460c8f8df09bc70b659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  deathVFX: {fileID: 855427676314453126, guid: a44db115207f14d3bbdd07af7a0d5cab, type: 3}
+  deathFX: {fileID: 855427676314453126, guid: a44db115207f14d3bbdd07af7a0d5cab, type: 3}
   hitVFX: {fileID: 855427676314453126, guid: ed546ae8dc2294f978f7e64834e3f93c, type: 3}
-  parent: {fileID: 0}
-  scorePerHit: 15
+  scorePerDeath: 15
   hitPoints: 4
+--- !u!65 &8522762927855082537
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493554632450496841}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.865558, y: 4.241986, z: 11.309124}
+  m_Center: {x: 0.00000047683716, y: -0.000006198883, z: -0.0000011920929}
 --- !u!1 &493707026967774171
 GameObject:
   m_ObjectHideFlags: 0
