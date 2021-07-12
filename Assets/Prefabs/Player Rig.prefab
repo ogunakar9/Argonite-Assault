@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1036829956055457039}
   - component: {fileID: 1036829956055457032}
   - component: {fileID: 1036829956055457033}
+  - component: {fileID: 1297330413134364979}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -83,6 +84,66 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1036829956055457034}
   m_Enabled: 1
+--- !u!114 &1297330413134364979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1036829956055457034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 1036829956055457039}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 1
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 1
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
 --- !u!1 &1036829957702666142
 GameObject:
   m_ObjectHideFlags: 0
@@ -135,6 +196,35 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!54 &822812167
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037748697602753859}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &822812173
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037748697602753859}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 13.638825, y: 3.256053, z: 10.850526}
+  m_Center: {x: 0, y: 0.000006854534, z: 1.3764285e-21}
 --- !u!1001 &2334735178230528197
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -142,6 +232,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1036829957702666140}
     m_Modifications:
+    - target: {fileID: 1510364055270713, guid: 6c6015aedd9e9455d81a03cc2c1e2e81, type: 3}
+      propertyPath: lasers.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1510364055270713, guid: 6c6015aedd9e9455d81a03cc2c1e2e81, type: 3}
+      propertyPath: lasers.Array.data[0]
+      value: 
+      objectReference: {fileID: 9161521161889063547}
+    - target: {fileID: 1510364055270713, guid: 6c6015aedd9e9455d81a03cc2c1e2e81, type: 3}
+      propertyPath: lasers.Array.data[1]
+      value: 
+      objectReference: {fileID: 2852581028224042863}
     - target: {fileID: 572170538183163818, guid: 6c6015aedd9e9455d81a03cc2c1e2e81, type: 3}
       propertyPath: m_Name
       value: Laser Left
@@ -168,7 +270,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1162983457231867200, guid: 6c6015aedd9e9455d81a03cc2c1e2e81, type: 3}
       propertyPath: TrailModule.lifetime.scalar
-      value: 0.02
+      value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 1162983457231867200, guid: 6c6015aedd9e9455d81a03cc2c1e2e81, type: 3}
       propertyPath: TrailModule.sizeAffectsWidth
@@ -180,7 +282,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1162983457231867200, guid: 6c6015aedd9e9455d81a03cc2c1e2e81, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
-      value: 200
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1162983457231867200, guid: 6c6015aedd9e9455d81a03cc2c1e2e81, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
@@ -292,7 +394,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5229130976448817236, guid: 6c6015aedd9e9455d81a03cc2c1e2e81, type: 3}
       propertyPath: InitialModule.startSpeed.scalar
-      value: 200
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5229130976448817236, guid: 6c6015aedd9e9455d81a03cc2c1e2e81, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
@@ -340,8 +442,23 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 2cbfbbcf3e223344a83f96898c93ddc9, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6c6015aedd9e9455d81a03cc2c1e2e81, type: 3}
+--- !u!1 &1037748697602753859 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3314780955649342854, guid: 6c6015aedd9e9455d81a03cc2c1e2e81, type: 3}
+  m_PrefabInstance: {fileID: 2334735178230528197}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1039293573239922555 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3317722159379785662, guid: 6c6015aedd9e9455d81a03cc2c1e2e81, type: 3}
+  m_PrefabInstance: {fileID: 2334735178230528197}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9161521161889063547 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6864303536836369086, guid: 6c6015aedd9e9455d81a03cc2c1e2e81, type: 3}
+  m_PrefabInstance: {fileID: 2334735178230528197}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &2852581028224042863 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 572170538183163818, guid: 6c6015aedd9e9455d81a03cc2c1e2e81, type: 3}
   m_PrefabInstance: {fileID: 2334735178230528197}
   m_PrefabAsset: {fileID: 0}
